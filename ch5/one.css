@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Serif', serif;
+    margin: 0px;
+    /* box-sizing: border-box; */
+}
+
+#product-overview {
+    background: url("freedom.jpg");
+    padding: 10px;
+    /* border: 5px black solid; */
+    /* margin: 20px; */
+    height: 528px;
+    /* box-sizing: border-box; */
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    /* margin: 0px; */
+    
+    /* font-family: 'Anton', sans-serif; */
+}
+
+.section-title {
+    color: green;
+    text-align: center;
+    /* font-family: inherit; */
+}
+
+/* h1 {
+    
+    font-family: 'Cedarville Cursive', cursive;
+} */
+
+/* * {
+    font-family: sans-serif;
+} */
+.plan {
+    background: #d5ffdc;
+    text-align: center;
+    padding: 16px;
+    margin: 8px;
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+}
+
+.main-header {
+    background: rgb(20, 190, 20);
+    padding: 8px 16px ;
+    width: 100%;
+}
+
+.main-header > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.main-header__brand {
+    color: #0e4f1f;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 22px;
+    
+}
+
+.main-nav {
+    display: inline-block;
+    text-align: right;
+    /* note alignment depends on width of the element */
+    /* width: 100%; */
+    width: calc(100% - 70px);
+    /* 64px is width of (<div> + some (~5)) pixels for white space when we write code */
+    vertical-align: middle;
+}
+
+.main-nav__items {
+    margin: 0;
+    list-style: none; /* padding: 0 should also remove the bullets */ 
+}
+
+.main-nav__item {
+    display: inline-block;
+    margin: 0px 20px;
+    padding: 3px 0px;
+    /* text-decoration: none; */
+    /* inline-block items lie next to each other like inline items but can be styled like block elements */ 
+}
+
+.main-nav__item a {
+    text-decoration: none;
+    color: #0e4f1f;
+    font-weight: bold;
+    padding: 3px 0;
+}
+
+.main-nav__item a:hover,
+.main-nav__item a:active {
+    color: white;
+    border-bottom: 5px solid white; 
+}
+
+.main-nav__item--cta a {
+    color: white;
+    background: red;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.main-nav__item--cta a:hover,
+.main-nav__item--cta a:active {
+    color: red;
+    background: white;
+    border: none;
+}
+/* p::first-letter {
+    color: red;
+    font-size: 28px;
+} */
