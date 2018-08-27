@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'IBM Plex Serif', serif;
+    margin: 0px;
+    /* box-sizing: border-box; */
+}
+
+#product-overview {
+    background: red;
+    padding: 10px;
+    /* border: 5px black solid; */
+    /* margin: 20px; */
+    height: 528px;
+    /* box-sizing: border-box; */
+}
+
+#product-overview h1 {
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+    /* margin: 0px; */
+    /* margin is not inherited from body because browser has its defaults and they have higher priority */
+    /* even if padding of #product-overview is set to 1px, remember that the padding will be applied after 
+     * the default margin of #product-overview h1, so the gap between this section and the section above will narrow tremendously
+    
+    /* font-family: 'Anton', sans-serif; */
+}
+
+.section-title {
+    color: green;
+    /* font-family: inherit; */
+}
+
+/* h1 {
+    
+    font-family: 'Cedarville Cursive', cursive;
+} */
+
+/* * {
+    font-family: sans-serif;
+} */
+
+.main-header {
+    background: rgb(20, 190, 20);
+    padding: 8px 16px ;
+    width: 100%;
+}
+
+
+.main-nav__item {
+    
+}

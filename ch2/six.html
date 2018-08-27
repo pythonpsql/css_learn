@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>uHost</title>
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="main_six.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+    </head>
+    <body>
+      <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose your plan</h1>
+        </section>
+      </main>
+    </body>
+</html>
+
+<!-- 
+Changes made after five.html
+    all h1 elements will have their style applied if we use h1 selector
+    if we do not want this behaviour, one of the options is to use class 
+    class name will be given inline to the element using class="<classname>"
+    it the css file the selector will be .<classname>
+    universal selector (*): applied to all elements on the page
+    id selectors are unique (idname is not repeated unlike classname) and specified using #<idname> in css file
+    attribute selectors select elements having the same attribute
+
+    we added id: product overview and plans for two section tags 
+    we added class: section-title for h1 tag inside plan section 
+
+    Now, in our css we have a h1 selector and .section-title which is a class for h1 under plan section
+    CSS Specifity rules will be used to resolve such conflict
+    Note that font-family will still be used from h1 selector and not browser defaults
+    CSS Specifity order lowest to highest priority:
+        <tag> and ::pseudo-element selectors
+        .class and :pseudo-class and [attribute] selectors
+        #id selectors
+        inline styles
+        there are some other rules too like inheritance
+    we repeat the h1 selector with only the default san-serif font 
+        the h1 selector appearing last is applied among the two h1 selectors
+-->

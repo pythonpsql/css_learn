@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>uHost</title>
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="one.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i">
+        <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
+
+    </head>
+    <body>
+      <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose your plan</h1>
+            <p>Make sure you get the most for your money!</p>
+        </section>
+      </main>
+    </body>
+</html>
+
+
+<!-- 
+    Element has content
+    For section content is h1 tag(in the example)
+    For h1 tag content is text
+    Content has padding
+    Padding has border
+    Margin is not part of the element.
+    There are two types of elements -- block level and inline
+
+    We add padding of 20px to #product-overview
+    Observe the images of h1 and section before and after padding
+    There is no change in h1
+    h1 always seen extended beyond the section because there h1 is shown inclusive of its margin
+        you can remove padding, set h1 margin to 50px to verify this
+    When padding of 20px is added to section #product-overview
+        that padding is applied to content + margin of h1
+        If we add padding, the content of the element is to be considered as
+            content + any margin it may have
+            padding is added after margin of child elements so that margin and padding do not overlap
+    Now we add border and margin
+        Adding margin overlaps section margin with that of body
+    The margin of Choose your plan is now collapsed with #product-overview margin
+        The larger margin among two adjacent block elements is applied
+-->

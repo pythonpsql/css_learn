@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>uHost</title>
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="main_seven.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i">
+    </head>
+    <body>
+      <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose your plan</h1>
+            <p>Make sure you get the most for your money!</p>
+        </section>
+      </main>
+    </body>
+</html>
+
+<!-- 
+Changes made after six.html
+    we added * selector at the bottom of css and set font-family to sans-serif
+    it did not change the fonts because it had lower priority than h1 selector as seen in Console
+    it is also an inefficient way to change any property since it has to parse every element in the page 
+    now we try to style body which wraps many other elements contained inside it
+    when body was used to change font-family, it still did not work
+    inheritance has specifity lower than browser defaults, so it failed to change h1 fonts
+
+    we added p tag in plans section
+    and we see that the font specified in body selector was used
+-->

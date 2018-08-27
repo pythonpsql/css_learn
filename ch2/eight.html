@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>uHost</title>
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="main_eight.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i">
+        <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
+
+    </head>
+    <body>
+      <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose your plan</h1>
+            <p>Make sure you get the most for your money!</p>
+        </section>
+      </main>
+    </body>
+</html>
+
+
+<!-- 
+    Q. How to ensure 'Choose your plan' h1 tag does not get the 
+    same style as h1 tag in product-overview section?
+    A. We get same style because of h1 selector in product-overview section. 
+       We want the default style.
+
+       First method: set property font-family to inherit 
+       It basically increases the specificity priority of inheritance for that property
+
+       Second method: assign class or id to h1 under product-overview
+       class:
+       Not a good idea since it won't be reused.
+       Create a class only if it's reusable
+       id:
+       Semantically, not a good idea since we are already under an id
+
+       Third method: combinator
+       we change current h1 to #product-overview h1        
+       we can enclose h1 in a <div> only to confirm that h1 does not have to be a child but merely a descendant
+
+        Additional, if we now re-introduce h1 tag at the bottom of the table
+            it wouldn't be applied because #product-overview h1 has higher specifity
+            it would be applied to 'Choose your plan' h1
+            #product-overview h1 is more specific than simply h1
+            the more specific rule has higher specificity than less specific rule
+        Note that combinator has nothing to do with inheritance, 
+            the background of #product-overview h1 is not the same as #product-overview
+        
+
+-->
