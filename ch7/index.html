@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>uHost</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div>
+            <a href="index.html" class="main-header__brand">
+                uHost
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="packages/index.html">Packages</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="customers/index.html">Customers</a>
+                </li>
+                <li class="main-nav__item main-nav__item--cta">
+                    <a href="start-hosting/index.html">Start Hosting</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve.</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose Your Plan</h1>
+            <div class="plan__list">
+                <article class="plan">
+                    <h1 class="plan__title">FREE</h1>
+                    <h2 class="plan__price">$0/month</h2>
+                    <h3>For hobby projects or small teams.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">1 Workspace</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">10GB Storage</li>
+                        <li class="plan__feature">Basic Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+                <article class="plan plan--highlighted">
+                    <h1 class="plan__annotation">RECOMMENDED</h1>
+                    <h1 class="plan__title">PLUS</h1>
+                    <h2 class="plan__price">$29/month</h2>
+                    <h3>For ambitious projects.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">5 Workspaces</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">100GB Storage</li>
+                        <li class="plan__feature">Plus Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+                <article class="plan">
+                    <h1 class="plan__title">PREMIUM</h1>
+                    <h2 class="plan__price">$99/month</h2>
+                    <h3>Your enterprise solution.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">10 Workspaces</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">Unlimited Storage</li>
+                        <li class="plan__feature">Priority Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="key-features">
+            <h1 class="section-title">Many Good Reasons to Stick Around</h1>
+            <ul class="key-feature__list">
+                <li class="key-feature">
+                    <div class="key-feature__image">
+
+                    </div>
+                    <p class="key-feature__description">3,857,000 Trusting Customers</p>
+                </li>
+                <li class="key-feature">
+                    <div class="key-feature__image">
+
+                    </div>
+                    <p class="key-feature__description">99.999% Uptime Guarantee</p>
+                </li>
+                <li class="key-feature">
+                    <div class="key-feature__image">
+
+                    </div>
+                    <p class="key-feature__description">Lightning Fast CDN</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <nav>
+            <ul class="main-footer__links">
+                <li class="main-footer__link">
+                    <a href="#">Support</a>
+                </li>
+                <li class="main-footer__link">
+                    <a href="#">Terms of Use</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
+
+<!--
+    main.css
+    #product-overview {
+        background-color: "red";
+        // goes behind image
+        background-size: 100px;
+        // image becomes of 100 px size (height & width)
+        also, it is repeated
+        background-repeat: no-repeat;
+        // stop the repeating of image
+        background-repeat: repeat-x;
+        // repeat only along the x-axis
+        // can also use repeat-y for y-axis
+        background-size: 300px 100px;
+        // width and height both are specified
+        // aspect ratio is lost
+        // to keep aspect ratio use:
+        background-size: auto 100%
+        // width is auto and height 100%
+        // container may have different aspect ratio and
+        // so may have empty space
+        background-size: 100%
+        // width is cropped to use full container-width
+        // due to cropping height (bottom of image) may be lost
+        background-size: cover;
+        // larger of width or height is used to fully occupy
+        // the container
+        // some image may be lost due to cropping
+        background-size: contain;
+        // show full image and keep aspect ratio
+        // container may have empty space
+        background-position: 20px
+        // it defines how the left edge should be positioned from 
+        // left of container
+        // 20px white space is seen on the left of image
+        background-position: 20px 40px;
+        // second value is for position from top
+        background-position: 10%;
+        // how much should be cropped (removed) from the left
+        // since our container can hold full width
+        // this value now make no difference
+        background-position: 10% 10%;
+        // how much should be cropped (removed) from the top 
+        // out of area which does fit in the container
+        background-position: 10% 50%;
+        // default is 50% if no value is specified
+        background-position: center;
+        // crop equally from all four sides
+        background-position: left top; (same as 0% 0%)
+        // no cropping on left and top
+        background-position: left bottom; 
+        background-position: left 10% bottom 20%; 
+
+        background-<properties> for image only:
+        image
+        position
+        size
+        repeat
+        origin
+        attachment
+
+        background-origin: content-box
+        background-origin: padding-box
+        background-origin: border-box
+        add a border to understand the above
+        border: 5px dashed red;
+
+        background-clip: content-box
+        background-clip: padding-box
+        background-clip: border-box
+        it over-writes background-origin
+
+        background-attachment
+        // cannot be demonstrated in our example
+        // rarely used
+        
+
+
+
+
+
+
+
+        
+        
+
+
+
+    }
+    
+-->
