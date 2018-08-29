@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>uHost</title>
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="three.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i">
+        <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
+
+    </head>
+    <body>
+      <header class="main-header">
+        <div>
+            <a href="three.html" class="main-header__brand">
+                uHost
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class=main-nav__items>
+                <li class="main-nav__item">
+                    <a href="packages/three.html">Packages</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="customers/three.html">Customers</a>
+                </li>
+                <li class="main-nav__item main-nav__item--cta">
+                    <a href="start-hosting/three.html">Start Hosting</a>
+                </li>
+            </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose your plan</h1>
+            <div>
+                <article class="plan">
+                    <h1 class="plan__title">FREE</h1>
+                    <h2 class="plan__price">$0/month</h2>
+                    <h3>For hobby projects or small teams.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">1 Workspace</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">10GB Storage</li>
+                        <li class="plan__feature">Basic Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+                <article class="plan plan--highlighted">
+                    <h1 class="plan__annotated">RECOMMENDED</h1>
+                    <h1 class="plan__title">PLUS</h1>
+                    <h2 class="plan__price">$29/month</h2>
+                    <h3>For ambitious projects.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">5 Workspaces</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">100GB Storage</li>
+                        <li class="plan__feature">Plus Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+                <article class="plan">
+                    <h1 class="plan__title">PREMIUM</h1>
+                    <h2 class="plan__price">$99/month</h2>
+                    <h3>Your enterprise solution.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">10 Workspaces</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">Unlimited Storage</li>
+                        <li class="plan__feature">Priority Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="key-features">
+            <h1 class="section-title">Many Good Reasons to Stick Around</h1>
+            <ul class="key-feature__list">
+                <li class="key-feature">
+                    <div class="key-feature__image">
+
+                    </div>
+                    <p class="key-feature__description">3,857,000 Trusting Customers</p>
+                </li>
+                <li class="key-feature">
+                    <div class="key-feature__image">
+
+                    </div>
+                    <p class="key-feature__description">99.999% Uptime Guarantee</p>
+                </li>
+                <li class="key-feature">
+                    <div class="key-feature__image">
+
+                    </div>
+                    <p class="key-feature__description">Lightning Fast CDN</p>
+                </li>
+            </ul>
+        </section>
+      </main>
+      <footer class="main-footer">
+          <nav>
+              <ul class="main-footer__links">
+                  <li class="main-footer__link">
+                      <a href="#">Support</a>
+                  </li>
+                  <li class="main-footer__link">
+                      <a href="#">Terms of Use</a>
+                  </li>
+              </ul>
+          </nav>
+      </footer>
+    </body>
+</html>
+
+
+<!--
+    1. We attach button class to all three buttons
+    2. Buttons have broswer defaults like font etc which over-write the font inherited from body
+    3. So we use font: inherit to force inheritance from body
+    4. We add border, padding and border-radius to button
+    5. Not in course: The plan features were not in the centre of plan, reason was browser default of padding was 40px, added
+        padding 4px to fix it
+    6. if we click and hold button, there's a border....that state is focus, it's outline property has to be fixed
+    7. we set outline to none in button:focus 
+    8. Pasted HTML code for core features 
+    9. added id key-features for the new section
+    10. added class section-title for the new h1 and then targeted it with #key-features h1
+    11. added class key-feature__list for ul and key-feature for li
+    12. added class key-feature__description for paragraphs
+    13. added class key-feature__image for 3 div to create placeholders for images
+    14. added HTML code for footer and added classes main-footer, main-footer__links and main-footer__link
+-->

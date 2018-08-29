@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>uHost</title>
+    <link rel="shortcut icon" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div>
+            <a href="index.html" class="main-header__brand">
+                uHost
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="packages/index.html">Packages</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="customers/index.html">Customers</a>
+                </li>
+                <li class="main-nav__item main-nav__item--cta">
+                    <a href="start-hosting/index.html">Start Hosting</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve.</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose Your Plan</h1>
+            <div class="plan__list">
+                <article class="plan">
+                    <h1 class="plan__title">FREE</h1>
+                    <h2 class="plan__price">$0/month</h2>
+                    <h3>For hobby projects or small teams.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">1 Workspace</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">10GB Storage</li>
+                        <li class="plan__feature">Basic Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+                <article class="plan plan--highlighted">
+                    <h1 class="plan__annotation">RECOMMENDED</h1>
+                    <h1 class="plan__title">PLUS</h1>
+                    <h2 class="plan__price">$29/month</h2>
+                    <h3>For ambitious projects.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">5 Workspaces</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">100GB Storage</li>
+                        <li class="plan__feature">Plus Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+                <article class="plan">
+                    <h1 class="plan__title">PREMIUM</h1>
+                    <h2 class="plan__price">$99/month</h2>
+                    <h3>Your enterprise solution.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">10 Workspaces</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">Unlimited Storage</li>
+                        <li class="plan__feature">Priority Support</li>
+                    </ul>
+                    <div>
+                        <button class="button">CHOOSE PLAN</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section id="key-features">
+            <h1 class="section-title">Many Good Reasons to Stick Around</h1>
+            <ul class="key-feature__list">
+                <li class="key-feature">
+                    <div class="key-feature__image">
+
+                    </div>
+                    <p class="key-feature__description">3,857,000 Trusting Customers</p>
+                </li>
+                <li class="key-feature">
+                    <div class="key-feature__image">
+
+                    </div>
+                    <p class="key-feature__description">99.999% Uptime Guarantee</p>
+                </li>
+                <li class="key-feature">
+                    <div class="key-feature__image">
+
+                    </div>
+                    <p class="key-feature__description">Lightning Fast CDN</p>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <footer class="main-footer">
+        <nav>
+            <ul class="main-footer__links">
+                <li class="main-footer__link">
+                    <a href="#">Support</a>
+                </li>
+                <li class="main-footer__link">
+                    <a href="#">Terms of Use</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
+
+<!-- 
+    Q. Why do we have to position our elements?
+    A. The position property of static is applied by default to every element. To position elements differently than the document flow, we have to change this property.
+     
+    To reposition an element we must use one or more of the properties: top, right, bottom, left. 
+    There are many positioning contexts (e.g. the element itself, viewport, body etc)  to determine how to apply the above properties.
+    
+    Steps:
+    1. .main-header {... position: fixed;}
+    There is no need for left:0px, top:0px since we have no parent with any margin 
+    The image moves up and needs to be fixed
+
+    Aside:
+    Set background image on packages page
+    We place an image in images/
+    We create a new div with class background in packages/index.html
+    we create a background property referencing the image in packages.css
+    no change
+    we set width to 500px
+    no change
+    we set height to 100%
+    no change
+    we change height to 500px
+    now we see the image thought not occupying the entire page
+    we set position to fixed
+    now we change width and height to 100% and it works
+    the image is on top of every other element on the page except the main-header (navigation bar)
+    we need to bring the package class (which holds all other content) above this image
+    we need to use z-index to fix this
+    z-index default (and auto) value is 0 even for elements with position:fixed
+    to place elements on top, keep their z-index value higher
+    however, z-index value has no effect on elements which have 
+        position: fixed
+    so, we set the z-index value of .background to -1
+    it works
+    if we set z-index to 1
+    even the navigation bar goes behind the image
+    if two elements with position:fixed have same z-index, the order of appearance in html (not css) file matters
+
+    Next: Adding a Recommended Badge to the Plus plan
+    Note that we are positioning it, inside of an existing element
+    We could use margins but it wouldn't be elegant
+    Steps:
+    In the packages/index.html, we
+        add h2 header with class package__badge 
+        we add position, top and left values to it
+        it's currently inherting margin, we give it a new margin
+        we could position it as desired by changing top and left 
+        however, as we scroll down, it will move too
+        so, we change position fixed to absolute
+        for absolute positions: 
+            the positioning context is determined as follows:
+            1. If none of the ancestors has 
+                any positioning property applied, then 
+                it is the html element
+            2. If we have position ancestors, then
+                positioning context of closest ancestor     
+            currently, html is our pos context
+            if we add position:absolute to package class,
+                all elements are messed up since all elements
+                inside package have
+                the html ancestor now
+            we set position:relative of package class
+            This allows us to remove left property of 
+            .package__badge
+            and set right property to 0px
+            since now the ancestor is package class
+            next problem is that package is now above nav-bar,
+            when we scroll down
+            to fix that by changing z-index of .main-header to 1
+
+-->
+
+

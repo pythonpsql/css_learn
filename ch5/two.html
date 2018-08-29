@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+        <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+        <title>uHost</title>
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="two.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif:400,400i">
+        <link href="https://fonts.googleapis.com/css?family=Cedarville+Cursive" rel="stylesheet">
+
+    </head>
+    <body>
+      <header class="main-header">
+        <div>
+            <a href="two.html" class="main-header__brand">
+                uHost
+            </a>
+        </div>
+        <nav class="main-nav">
+            <ul class=main-nav__items>
+                <li class="main-nav__item">
+                    <a href="packages/two.html">Packages</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="customers/two.html">Customers</a>
+                </li>
+                <li class="main-nav__item main-nav__item--cta">
+                    <a href="start-hosting/two.html">Start Hosting</a>
+                </li>
+            </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="product-overview">
+            <h1>Get the freedom you deserve</h1>
+        </section>
+        <section id="plans">
+            <h1 class="section-title">Choose your plan</h1>
+            <div>
+                <article class="plan">
+                    <h1 class="plan__title">FREE</h1>
+                    <h2 class="plan__price">$0/month</h2>
+                    <h3>For hobby projects or small teams.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">1 Workspace</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">10GB Storage</li>
+                        <li class="plan__feature">Basic Support</li>
+                    </ul>
+                    <div>
+                        <button>CHOOSE PLAN</button>
+                    </div>
+                </article>
+                <article class="plan plan--highlighted">
+                    <h1 class="plan__annotated">RECOMMENDED</h1>
+                    <h1 class="plan__title">PLUS</h1>
+                    <h2 class="plan__price">$29/month</h2>
+                    <h3>For ambitious projects.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">5 Workspaces</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">100GB Storage</li>
+                        <li class="plan__feature">Plus Support</li>
+                    </ul>
+                    <div>
+                        <button>CHOOSE PLAN</button>
+                    </div>
+                </article>
+                <article class="plan">
+                    <h1 class="plan__title">PREMIUM</h1>
+                    <h2 class="plan__price">$99/month</h2>
+                    <h3>Your enterprise solution.</h3>
+                    <ul class="plan__features">
+                        <li class="plan__feature">10 Workspaces</li>
+                        <li class="plan__feature">Unlimited Traffic</li>
+                        <li class="plan__feature">Unlimited Storage</li>
+                        <li class="plan__feature">Priority Support</li>
+                    </ul>
+                    <div>
+                        <button>CHOOSE PLAN</button>
+                    </div>
+                </article>
+            </div>
+        </section>
+      </main>
+    </body>
+</html>
+
+
+<!--
+    1. Added class plan--highlighted to recommended plan
+    2. In CSS, added a backgroun, color and box shadow to this class
+    3. Added class plan__annotation to h1 of recommended plan
+    4. In CSS, added background , color, box-shadow and box-radius
+    5. Added class plan__features for ul
+    6. In CSS, set list-style to none for plan__feautures
+    7. To add vertical space between items of ul (i.e. li)
+    8. To do this we could write plan_features li { ... } or we could create class
+    9. We choose to create class for li "plan__feature"
+    10. In CSS, we added margin  = 10px
+    11. We created classes plan__title and plan__price
+    12. Upon changing the color in these two classes, we were required to change recommended plan's color
+    13. So we used combinator .plan--highlighted .plan__title and .plan--highlighted .plan__price to change their color
+-->
